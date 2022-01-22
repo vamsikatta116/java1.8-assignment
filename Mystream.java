@@ -112,7 +112,7 @@ public class Mystream {
 			//filtering out name of stock which debt price are less than 200
 			System.out.println("\n***** name of stock which debt price are less than 200******\n");
 			s.stream().filter(i->i.debt()<300).forEach(hi->System.out.println(hi.name()));
-			//map the sector to lowercase in stock
+			//map the sector to lowercase in stock and converting it into List of String using Collector
 			System.out.println("\n*****using map for sector name in lowercase\n");
 			List<String> oo=s.stream().distinct().map(ma->ma.sector().toLowerCase()).collect(Collectors.toList());
 			oo.forEach(j->System.out.println(j));
